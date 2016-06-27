@@ -1,6 +1,8 @@
 package javaconfig;
 
 
+import annotation.InjectRandomIntAnnotationBeanPostProcessor;
+import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.context.annotation.Bean;
 import races.BaseRace;
 import races.impl.Human;
@@ -14,4 +16,8 @@ public class JavaConfig {
         return human;
     }
 
+    @Bean
+    public BeanPostProcessor getInjectRandomIntBpp() {
+        return new InjectRandomIntAnnotationBeanPostProcessor();
+    }
 }

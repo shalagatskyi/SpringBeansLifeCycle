@@ -4,6 +4,8 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+    <bean class="annotation.InjectRandomIntAnnotationBeanPostProcessor"/>
+
     <bean id="human" class="races.impl.Human">
         <property name="message" value="Опять работа?!"/>
     </bean>

@@ -1,8 +1,12 @@
 package races.impl;
 
+import annotation.InjectRandomInt;
 import races.BaseRace;
 
 public class Human implements BaseRace {
+
+    @InjectRandomInt(min = 2, max = 10)
+    private int increasePerWeek;
 
     private String message;
 
@@ -17,7 +21,9 @@ public class Human implements BaseRace {
     }
 
     public void respondToAction() {
-        System.out.println(message);
+        for (int i = 0; i < increasePerWeek; i++) {
+            System.out.println(message);
+        }
     }
 
 }
