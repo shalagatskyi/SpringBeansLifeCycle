@@ -1,10 +1,12 @@
 package races.impl;
 
+import annotation.DeprecatedRace;
 import annotation.InjectRandomInt;
 import annotation.Profiling;
 import races.BaseRace;
 
 @Profiling(value = true)
+@DeprecatedRace(newImpl = Undead.class )
 public class Human implements BaseRace {
 
     @InjectRandomInt(min = 2, max = 10)

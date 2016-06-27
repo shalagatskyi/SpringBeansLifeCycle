@@ -6,6 +6,7 @@
 
     <bean class="annotation.ProfilingHandlerBeanPostProcessor"/>
     <bean class="annotation.InjectRandomIntAnnotationBeanPostProcessor"/>
+    <bean class="annotation.DeprecatedRaceHandlerBeanFactoryPostProcessor"/>
 
     <bean id="human" class="races.impl.Human">
         <property name="message" value="Опять работа?!"/>
