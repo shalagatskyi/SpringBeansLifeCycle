@@ -3,8 +3,10 @@ package races.impl;
 import annotation.DeprecatedRace;
 import annotation.InjectRandomInt;
 import annotation.Profiling;
+import org.springframework.stereotype.Component;
 import races.BaseRace;
 
+@Component
 @Profiling(value = true)
 @DeprecatedRace(newImpl = Undead.class )
 public class Human implements BaseRace {

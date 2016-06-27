@@ -4,33 +4,13 @@ package javaconfig;
 import annotation.DeprecatedRaceHandlerBeanFactoryPostProcessor;
 import annotation.InjectRandomIntAnnotationBeanPostProcessor;
 import annotation.ProfilingHandlerBeanPostProcessor;
-import org.springframework.beans.factory.config.BeanFactoryPostProcessor;
-import org.springframework.beans.factory.config.BeanPostProcessor;
-import org.springframework.context.annotation.Bean;
-import races.BaseRace;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
 import races.impl.Human;
 
-public class JavaConfig {
-
-    @Bean(name = "human")
-    public BaseRace generateHumanSetStyle() {
-        BaseRace human = new Human();
-        human.setMessage("Опять работа?!");
-        return human;
-    }
-
-    @Bean
-    public BeanPostProcessor getInjectRandomIntBpp() {
-        return new InjectRandomIntAnnotationBeanPostProcessor();
-    }
-
-    @Bean
-    public BeanPostProcessor getProfilingBpp() {
-    return new ProfilingHandlerBeanPostProcessor();
-    }
-
-    @Bean
-    public BeanFactoryPostProcessor getDeprecatedRaceBfpp() {
-        return new DeprecatedRaceHandlerBeanFactoryPostProcessor();
-    }
-}
+@Configuration
+@ComponentScan(basePackageClasses = {DeprecatedRaceHandlerBeanFactoryPostProcessor.class,
+        InjectRandomIntAnnotationBeanPostProcessor.class,
+        ProfilingHandlerBeanPostProcessor.class,
+        Human.class})
+public class JavaConfig {}

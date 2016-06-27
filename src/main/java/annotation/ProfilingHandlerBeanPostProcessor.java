@@ -11,6 +11,7 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
+@Component
 public class ProfilingHandlerBeanPostProcessor implements BeanPostProcessor{
     private Map<String,Class> classMap = new HashMap<>();
 
