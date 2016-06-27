@@ -1,8 +1,10 @@
 package races.impl;
 
 import annotation.InjectRandomInt;
+import annotation.Profiling;
 import races.BaseRace;
 
+@Profiling(value = true)
 public class Human implements BaseRace {
 
     @InjectRandomInt(min = 2, max = 10)

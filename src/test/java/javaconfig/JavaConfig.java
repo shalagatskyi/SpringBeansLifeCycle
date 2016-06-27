@@ -2,6 +2,7 @@ package javaconfig;
 
 
 import annotation.InjectRandomIntAnnotationBeanPostProcessor;
+import annotation.ProfilingHandlerBeanPostProcessor;
 import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.context.annotation.Bean;
 import races.BaseRace;
@@ -19,5 +20,10 @@ public class JavaConfig {
     @Bean
     public BeanPostProcessor getInjectRandomIntBpp() {
         return new InjectRandomIntAnnotationBeanPostProcessor();
+    }
+
+    @Bean
+    public BeanPostProcessor getProfilingBpp() {
+    return new ProfilingHandlerBeanPostProcessor();
     }
 }
