@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 import races.BaseRace;
 
 @Component
-@Profiling(value = true)
+@Profiling(value = false)
 @EvolvedRace(newImpl = Undead.class )
 public class Human implements BaseRace {
 
