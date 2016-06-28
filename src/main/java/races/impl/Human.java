@@ -1,11 +1,11 @@
 package races.impl;
 
-import annotation.InjectRandomInt;
+import annotation.InjectRandomUnits;
 import races.BaseRace;
 
 public class Human implements BaseRace {
 
-    @InjectRandomInt(min = 2, max = 10)
+    @InjectRandomUnits(min = 2, max = 10)
     private int increasePerWeek;
 
     private String message;

@@ -7,13 +7,13 @@ import org.springframework.util.ReflectionUtils;
 import java.lang.reflect.Field;
 import java.util.Random;
 
-public class InjectRandomIntAnnotationBeanPostProcessor implements BeanPostProcessor {
+public class InjectRandomUnitsAnnotationBeanPostProcessor implements BeanPostProcessor {
 
     public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
         Field[] declaredFields = bean.getClass().getDeclaredFields();
 
         for (Field field : declaredFields) {
-            InjectRandomInt annotation = field.getAnnotation(InjectRandomInt.class);
+            InjectRandomUnits annotation = field.getAnnotation(InjectRandomUnits.class);
             if (annotation != null) {
                 int min = annotation.min();
                 int max = annotation.max();
