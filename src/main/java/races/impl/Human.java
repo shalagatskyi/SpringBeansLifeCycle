@@ -5,7 +5,7 @@ import annotation.InjectRandomUnits;
 import annotation.Profiling;
 import races.BaseRace;
 
-@Profiling(value = true)
+@Profiling(value = false)
 @EvolvedRace(newImpl = Undead.class )
 public class Human implements BaseRace {
 

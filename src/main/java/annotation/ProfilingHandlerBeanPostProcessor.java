@@ -18,9 +18,11 @@ public class ProfilingHandlerBeanPostProcessor implements BeanPostProcessor{
     public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
         Class beanClass = bean.getClass();
         if(beanClass.isAnnotationPresent(Profiling.class)){
-            classMap.put(beanName,beanClass);
+            Profiling annotation = (Profiling) beanClass.getAnnotation(Profiling.class);
+            if (annotation.value()) {
+                classMap.put(beanName, beanClass);
+            }
         }
-
         return bean;
     }
 
