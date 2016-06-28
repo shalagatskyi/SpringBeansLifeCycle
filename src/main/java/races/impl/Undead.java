@@ -5,9 +5,7 @@ import races.BaseRace;
 public class Undead implements BaseRace {
 
     @Override
-    public void setMessage(String message) {
-
-    }
+    public void setMessage(String message) {}
 
     @Override
     public String getMessage() {

@@ -1,16 +1,16 @@
 package javaconfig;
 
 
-import annotation.DeprecatedRaceHandlerBeanFactoryPostProcessor;
-import annotation.InjectRandomIntAnnotationBeanPostProcessor;
+import annotation.EvolvedRaceHandlerBeanFactoryPostProcessor;
+import annotation.InjectRandomUnitsAnnotationBeanPostProcessor;
 import annotation.ProfilingHandlerBeanPostProcessor;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import races.impl.Human;
 
 @Configuration
-@ComponentScan(basePackageClasses = {DeprecatedRaceHandlerBeanFactoryPostProcessor.class,
-        InjectRandomIntAnnotationBeanPostProcessor.class,
+@ComponentScan(basePackageClasses = {EvolvedRaceHandlerBeanFactoryPostProcessor.class,
+        InjectRandomUnitsAnnotationBeanPostProcessor.class,
         ProfilingHandlerBeanPostProcessor.class,
         Human.class})
 public class JavaConfig {}

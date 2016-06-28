@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 import java.util.Arrays;
 
 @Component
-public class DeprecatedRaceHandlerBeanFactoryPostProcessor implements BeanFactoryPostProcessor{
+public class EvolvedRaceHandlerBeanFactoryPostProcessor implements BeanFactoryPostProcessor{
     public void postProcessBeanFactory(ConfigurableListableBeanFactory beanFactory) throws BeansException {
         String[] beans = beanFactory.getBeanDefinitionNames();
         Arrays.stream(beans).forEach(name->{
@@ -17,7 +17,7 @@ public class DeprecatedRaceHandlerBeanFactoryPostProcessor implements BeanFactor
             String beanClassName = beanDefinition.getBeanClassName();
             try{
                 Class beanClass = Class.forName(beanClassName);
-                DeprecatedRace annotation = (DeprecatedRace) beanClass.getAnnotation(DeprecatedRace.class);
+                EvolvedRace annotation = (EvolvedRace) beanClass.getAnnotation(EvolvedRace.class);
                 if(annotation != null){
                     beanDefinition.setBeanClassName(annotation.newImpl().getName());
                 }
