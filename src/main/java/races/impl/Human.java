@@ -1,15 +1,15 @@
 package races.impl;
 
-import annotation.DeprecatedRace;
-import annotation.InjectRandomInt;
+import annotation.EvolvedRace;
+import annotation.InjectRandomUnits;
 import annotation.Profiling;
 import races.BaseRace;
 
 @Profiling(value = true)
-@DeprecatedRace(newImpl = Undead.class )
+@EvolvedRace(newImpl = Undead.class )
 public class Human implements BaseRace {
 
-    @InjectRandomInt(min = 2, max = 10)
+    @InjectRandomUnits(min = 2, max = 10)
     private int increasePerWeek;
 
     private String message;

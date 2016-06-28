@@ -1,4 +1,3 @@
-import annotation.DeprecatedRaceHandlerBeanFactoryPostProcessor;
 import javaconfig.JavaConfig;
 import org.junit.Test;
 import org.junit.runner.RunWith;
