@@ -1,7 +1,7 @@
 package javaconfig;
 
 
-import annotation.InjectRandomIntAnnotationBeanPostProcessor;
+import annotation.InjectRandomUnitsAnnotationBeanPostProcessor;
 import annotation.ProfilingHandlerBeanPostProcessor;
 import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.context.annotation.Bean;
@@ -18,12 +18,12 @@ public class JavaConfig {
     }
 
     @Bean
-    public BeanPostProcessor getInjectRandomIntBpp() {
-        return new InjectRandomIntAnnotationBeanPostProcessor();
+    public static BeanPostProcessor getInjectRandomUnitsBpp() {
+        return new InjectRandomUnitsAnnotationBeanPostProcessor();
     }
 
     @Bean
-    public BeanPostProcessor getProfilingBpp() {
+    public static BeanPostProcessor getProfilingBpp() {
     return new ProfilingHandlerBeanPostProcessor();
     }
 }
