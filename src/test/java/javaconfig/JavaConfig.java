@@ -2,9 +2,11 @@ package javaconfig;
 
 
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 import races.BaseRace;
 import races.impl.Human;
 
+@Configuration
 public class JavaConfig {
 
     @Bean(name = "human")
