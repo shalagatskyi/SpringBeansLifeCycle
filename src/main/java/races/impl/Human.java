@@ -4,7 +4,7 @@ import annotation.InjectRandomUnits;
 import annotation.Profiling;
 import races.BaseRace;
 
-@Profiling(value = true)
+@Profiling(value = false)
 public class Human implements BaseRace {
 
     @InjectRandomUnits(min = 2, max = 10)
