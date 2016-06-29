@@ -17,6 +17,6 @@ public class XmlBasedApp {
     @Test
     public void testXmlConfigApp() {
         human.respondToAction();
-        assertEquals(human.getMessage(), "Опять работа?!");
+        assertEquals(human.getMessage(), "Нужно больше зиггуратов!");
     }
 }
