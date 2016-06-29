@@ -18,7 +18,7 @@ public class JavaConfigBasedApp {
     @Test
     public void testJavaConfigApp() {
         human.respondToAction();
-        assertEquals(human.getMessage(), "Опять работа?!");
+        assertEquals(human.getMessage(), "Нужно больше зиггуратов!");
     }
 
 }
